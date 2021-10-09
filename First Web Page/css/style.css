@@ -113,8 +113,6 @@ body {
   color: #ff6b08;
 }
 
-
-
 /* ========= left-side ========= */
 
 .left-side {
@@ -373,7 +371,10 @@ footer {
   header nav li,
   #newsletter h1,
   #newsletter form,
-  #boxes .box {
+  #boxes .box,
+  #main .left-side,
+  #main .right-side,
+  #download a {
     float: none;
     text-align: center;
     width: 100%;
@@ -395,5 +396,25 @@ footer {
   #newsletter form input[type="email"] {
     width: 100%;
     margin-bottom: 5px;
+  }
+  .container2 {
+    flex-direction: column;
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  .right-side {
+    padding: 0px;
+  }
+
+  #download .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #download-item2 .widget-link {
+    padding: 20px 55px 20px 55px;
   }
 }
