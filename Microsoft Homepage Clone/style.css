@@ -137,6 +137,7 @@ ul{
     height: 350px;
     width: 100%;
     background: url('./img/xbox.png') no-repeat center center/cover;
+    margin-bottom: 20px;
 }
 
 .xbox .content {
