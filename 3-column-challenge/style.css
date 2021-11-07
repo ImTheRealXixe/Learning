@@ -120,4 +120,12 @@ img {
 .container {
     flex-direction: column;
 }
+
+.first-element {
+    border-radius: 5px  5px 0 0;
+}
+
+.third-element {
+    border-radius: 0 0 5px 5px;
+}
 }
