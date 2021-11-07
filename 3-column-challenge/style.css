@@ -116,7 +116,7 @@ img {
     color: hsl(228, 45%, 44%); 
 }
 
-@media(max-width: 890px) {
+@media(max-width: 750px) {
 .container {
     flex-direction: column;
 }
