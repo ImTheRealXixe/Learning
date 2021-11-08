@@ -6,6 +6,12 @@
 
 body {
     font-size: 15px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 10px;
 }
 
 p {
@@ -15,7 +21,7 @@ p {
     font-size: 14px;
 }
 
-h1 {
+h2 {
     color: hsl(0, 0%, 95%);
     text-transform: uppercase;
     font-family: 'Big Shoulders Display', serif;
@@ -29,11 +35,21 @@ img {
     left: -5px;
 }
 
-.container {
-    width: 90%;
-    max-width: 1440px;;
+.sr-only {
+    position: absolute;
+    top: auto;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .container div {
     width: 300px;
@@ -42,10 +58,6 @@ img {
     display: grid;
 }
 
-.container div.test {
-    display: flex;
-    width: 100%;
-}
 
 .btn {
     background: hsl(0, 0%, 95%);
@@ -111,11 +123,12 @@ img {
     border: 2px solid hsl(0, 0%, 95%);
 }
 
-.attribution { 
-    font-size: 11px; text-align: center; 
+footer { 
+    font-size: 11px; 
+    text-align: center; 
 }
 
-.attribution a {
+footer a {
     color: hsl(228, 45%, 44%); 
 }
 
@@ -131,4 +144,5 @@ img {
 .third-element {
     border-radius: 0 0 5px 5px;
 }
+
 }
