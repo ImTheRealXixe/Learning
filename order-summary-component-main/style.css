@@ -1,0 +1,201 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 10px;
+    background: hsl(225, 100%, 94%);
+}
+
+a {
+    font-family: 'Red Hat Display', serif;
+    font-weight: 700;
+}
+
+p {
+    font-size: 16px;
+    font-family: 'Red Hat Display', serif;
+    font-weight: 500;
+    color: hsl(224, 23%, 55%);
+}
+
+main {
+    width: 100%; 
+}
+
+h2 {
+    font-family: 'Red Hat Display', serif;
+    font-weight: 900;
+}
+
+h3 {
+    font-family: 'Red Hat Display', serif;
+    font-weight: 700;
+}
+/* Background wave*/
+
+img.background-desktop {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    z-index: -10;
+    top: 0;
+}
+
+/* Footer */
+
+footer { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+footer a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+/* Layout */
+.layout {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.layout div {
+    display: flex;
+    width: 450px;
+    height: 110px;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(225, 100%, 98%);
+}
+
+/* Image at the top of the design */
+
+.layout .top-image {
+    border-radius: 10px 10px 0 0;
+    height: auto;
+    padding-top: 0;
+}
+
+/* Description */
+.layout .description {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 180px;
+}
+
+.description h2{
+    padding-top: 40px;
+    padding-bottom: 15px;
+    font-size: 31px;
+}
+
+.description p {
+    text-align: center;
+    line-height: 30px;
+    padding: 0 50px;
+}
+
+/* Sub Plan */
+.layout .payment-plan-container {
+    height: 100px;
+}
+
+.payment-plan-container .payment-plan{
+    height: 80px;
+    width: 350px;
+    background: hsl(225, 73%, 96%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.payment-plan-container .payment-plan .selected-plan {
+    position: relative;
+    right: 30px;
+    font-size: 15px;
+    line-height: 25px;
+}
+.payment-plan-container .payment-plan .change {
+    color: hsl(245, 75%, 52%);
+}
+
+.payment-plan-container .payment-plan .change:active {
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+img.music-icon{
+    height: auto;
+    width: auto;
+}
+
+/* Proceed Button */
+.layout .proceed-container {
+    display: grid;
+    align-content:end;
+    padding-bottom: 20px;
+}
+
+.layout .proceed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    width: 350px;
+    height: 50px;
+    text-decoration: none;
+    background: hsl(245, 75%, 52%);
+    color: hsl(225, 100%, 98%);
+    box-shadow: 1px 9px 9px 0px rgba(41, 33, 132, 0.29);;
+}
+
+.layout .proceed:active {
+    opacity: 0.7;
+}
+
+/* Cancel action */
+
+.cancel-container {
+    border-radius: 0 0 10px 10px;
+}
+
+.cancel {
+    position: relative;
+    bottom: 20px;
+    text-decoration: none;
+    color: hsl(224, 23%, 55%);
+}
+
+.cancel:active {
+    color: black;
+}
+
+
+@media (max-width: 500px) {
+    .layout div{
+        width: 400px;
+    }
+
+    .layout .top-image {
+        width: 400px;
+    }
+
+    .description p {
+        padding: 0 60px;
+    }
+}
+
