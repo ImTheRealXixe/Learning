@@ -1,0 +1,15 @@
+:root{
+    --clr-primary-300: #F3EED9;
+    --clr-primary-400: #824936;
+    --clr-primary-900: #222C2A;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, p {
+    margin: 0;
+}
