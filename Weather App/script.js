@@ -1,6 +1,6 @@
 let appId = '2a5cc3af57a0f47a0d85d5a5a7e2f7de';
 let units = 'metric';
-let searchMethod = 'zip';
+let searchMethod ;
 
 function getSearchMethod(searchTerm) {
     if(searchTerm.lenght === 5 && Number.parseInt(searchTerm) + '' === searchTerm)
@@ -19,6 +19,7 @@ function searchWeather(searchTerm) {
 }
 
 function init(resultFromServer) {
+    console.log(resultFromServer);
     switch (resultFromServer.weather[0].main) {
         case 'Clear':
             document.body.style.backgroundImage = 'url("./img/blue-sky.jpg")';
@@ -59,6 +60,14 @@ function init(resultFromServer) {
     let weatherIcon = document.getElementById('documentIconImg');
 
     weatherIcon.src = 'http://openweathermap.org/img/wn/' + resultFromServer.weather[0].icon + '.png';
+
+    let resultDescription = resultFromServer.weather[0].description;
+    weatherDescriptionHeader.innerText = resultDescription.charAt(0).toUpperCase() + resultDescription.slice(1);
+
+    temperatureElement.innerHTML = Math.floor(resultFromServer.main.temp) + '&#176';
+    windSpeedElement.innerHTML = 'Winds at ' + Math.floor(resultFromServer.wind.speed) + ' m/s';
+    cityHeader.innerHTML = resultFromServer.name;
+    humidityElement.innerHTML = 'Humidity levels at ' + resultFromServer.main.humidity + '%';
 }
 
 document.getElementById('searchBtn').addEventListener('click', () => {
