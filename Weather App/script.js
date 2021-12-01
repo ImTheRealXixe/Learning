@@ -68,6 +68,18 @@ function init(resultFromServer) {
     windSpeedElement.innerHTML = 'Winds at ' + Math.floor(resultFromServer.wind.speed) + ' m/s';
     cityHeader.innerHTML = resultFromServer.name;
     humidityElement.innerHTML = 'Humidity levels at ' + resultFromServer.main.humidity + '%';
+
+    setPositionForWeatherInfo();
+}
+
+function setPositionForWeatherInfo() {
+    let weatherContainer = document.getElementById('weatherContainer');
+    let weatherContainerHeight = weatherContainer.clientHeight;
+    let weatherContainerWidth = weatherContainer.clientWidth;
+
+    weatherContainer.style.left = `calc(50% - ${weatherContainerWidth/2}px)`;
+    weatherContainer.style.top = `calc(50% - ${weatherContainerHeight/2}px)`;
+    weatherContainer.style.visibility = 'visible';
 }
 
 document.getElementById('searchBtn').addEventListener('click', () => {
