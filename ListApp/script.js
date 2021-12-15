@@ -26,17 +26,10 @@ class Store {
         tasks.push(task);
         localStorage.setItem('tasks', JSON.stringify(tasks));
     }
-
+    // TODO
     static removeTask(title) {
         const tasks = Store.getTasks();
 
-        tasks.forEach((task, index) => {
-            if(task.title === title) {
-                tasks.splice(index, 1);
-            }
-        });
-
-        localStorage.setItem('tasks', JSON.stringify(tasks));
     }
 }
 
@@ -128,8 +121,8 @@ document.getElementById('task-list').addEventListener('click', (e) => {
     // remove task from UI
     UI.deleteTask(e.target)
 
-    //remove task from store
-    Store.removeTask(e.target.parentElement.previousElementSibling.textContent);
+    //remove task from store TODO
+    Store.removeTask();
 
     // Task removed
     UI.showAlert('Task Removed', 'success');
